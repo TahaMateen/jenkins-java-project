@@ -38,8 +38,8 @@ pipeline {
         label 'CentOS'
       }
       steps {
-        sh "wget http://34.217.26.72/rectangles/all/rectange_${env.BUILD_NUMBER}.jar"
-        sh "java -jar rectange_${env.BUILD_NUMBER}.jar 3 4"
+        sh "wget http://34.217.26.72/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
+        sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
       } 
     }
   }
