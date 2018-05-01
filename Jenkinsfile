@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label none
-  }
+  agent none
 
   options {
     buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '1'))
@@ -40,7 +38,7 @@ pipeline {
       steps {
         sh "wget http://34.217.26.72/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
-      } 
+      }
     }
   }
   
