@@ -3,13 +3,11 @@ pipeline {
   
   stages {
     stage('Say Hello') {
-      agent any
-      steps {
-        sayHello 'Awesome Student!'
+        steps {
+        sh 'Awesome Student!'
       }
     }
-    stage('Git Information') {
-      agent any      
+    stage('Git Information') {     
       steps {
         echo "My Branch Name: ${env.BRANCH_NAME}"
         }
