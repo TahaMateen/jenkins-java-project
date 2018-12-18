@@ -1,10 +1,10 @@
 pipeline {
-  agent none
+  agent any
   
   stages {
     stage('Say Hello') {
         steps {
-        sh 'Awesome Student!'
+        echo 'Awesome Student!'
       }
     }
     stage('Git Information') {     
